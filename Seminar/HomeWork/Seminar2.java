@@ -2,19 +2,14 @@ package Seminar.HomeWork;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.text.ParseException;
-import java.util.Iterator;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 public class Seminar2 {
 
   
