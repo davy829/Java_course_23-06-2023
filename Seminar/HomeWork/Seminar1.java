@@ -1,11 +1,11 @@
-package Seminar.HomeWork1;
+package Seminar.HomeWork;
 
 import java.util.Scanner;
 
 /**
  * program
  */
-public class program {
+public class Seminar1 {
 
     public static void main(String[] args) {
       // 1) System.out.println(triangleDigit(12)); //треугольные числа

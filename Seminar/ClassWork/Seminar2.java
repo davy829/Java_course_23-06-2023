@@ -1,16 +1,21 @@
-package Seminar.ClassWork2;
+package Seminar.ClassWork;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.Writer;
+import java.io.IOException;
 import java.lang.StringBuilder;
-public class prog {
-    public static void main(String[] args) {
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+public class Seminar2 {
+    public static void main(String[] args) throws SecurityException, IOException {
       //System.out.println(  strLenBuild(10, '0', 'g'));
       //System.out.println(polindrom("asdo5dsa"));
-      System.out.println(makeString("test", 5));
+     // System.out.println(makeString("DAvy", 5));
       String pathPrj = System.getProperty("user.dir");
-      String pathFile = pathPrj.concat("\\tester2.txt");
-      addToFile(pathFile,makeString("pathFile", 10));
+      String pathFile1 = pathPrj.concat("\\tester2.txt");
+      String pathFile2 = pathPrj.concat("\\tester3.txt");
+      //addToFile(pathFile1,makeString("test davy", 10));
+      writeToFile(pathFile2,findFilesInDirectory(pathPrj));
     }
 
     static String strLenBuild(int n, char c1,char c2){
@@ -38,6 +43,7 @@ public class prog {
   for (int i = 0; i < lenStr; i++) {
     sb.append(i);
     sb.append(") "+ s + "\n");
+
   
   }
   return sb.toString();
@@ -47,7 +53,7 @@ public class prog {
 static void addToFile(String fileName, String msg2){
 try {
     File myFile = new File(fileName);
-    FileWriter writer = new FileWriter(myFile);
+    FileWriter writer = new FileWriter(myFile,true); //дописывает файл второй аргумент !
     writer.write(msg2);
     writer.close();
 } catch (Exception e) {
@@ -56,4 +62,31 @@ try {
 
 }
  
+static String[] findFilesInDirectory(String dirPath){
+  File myDir = new File(dirPath);
+ return  myDir.list();
+ 
+}
+
+
+
+static void writeToFile(String fileName,String[] mylist )throws SecurityException, IOException{
+Logger log = Logger.getLogger(Seminar2.class.getName());
+FileHandler fh = new FileHandler("ClassWork2(log).txt");
+log.addHandler(fh);
+SimpleFormatter simple = new SimpleFormatter();
+fh.setFormatter(simple);
+try {
+  File myFile = new File(fileName);
+  FileWriter fr = new FileWriter(myFile);
+  for (String str : mylist) {
+    fr.write(str + "\n");
+  }
+  fr.close();
+
+} catch (Exception e) {
+  log.warning(e.getMessage());
+}
+}
+
 }

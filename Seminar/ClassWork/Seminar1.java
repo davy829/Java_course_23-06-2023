@@ -1,9 +1,10 @@
+package Seminar.ClassWork;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 /**
  * program
  */
-public class program {
+public class Seminar1 {
 
     public static void main(String[] args) {
        // whatYuoName();

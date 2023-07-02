@@ -1,4 +1,0 @@
-июн. 28, 2023 11:01:35 PM Seminar.HomeWork2.program main
-WARNING: TEST LOG status OK
-июн. 28, 2023 11:01:35 PM Seminar.HomeWork2.program main
-INFO: test 2

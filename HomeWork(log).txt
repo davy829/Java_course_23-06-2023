@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-02T14:40:08.165493100Z</date>
+  <millis>1688308808165</millis>
+  <nanos>493100</nanos>
+  <sequence>0</sequence>
+  <logger>Seminar.HomeWork.Seminar2</logger>
+  <level>WARNING</level>
+  <class>Seminar.HomeWork.Seminar2</class>
+  <method>writeLogFile</method>
+  <thread>1</thread>
+  <message>myList.txt (Не удается найти указанный файл)</message>
+</record>
+</log>

@@ -1,11 +1,11 @@
-package Seminar.HomeWork3;
-public class program {
+package Seminar.HomeWork;
+public class Seminar3 {
     public static void main(String[] args) {
     prost(20);
     }
 
     static void prost(int n){
-        StringBuilder sb = new StringBuilder();
+      //  StringBuilder sb = new StringBuilder();
       /*  if (n > 2 & n % 2 != 0){
         for (int i = 3; i < n / 2; i = i++) {
         }
