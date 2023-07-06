@@ -1,10 +1,13 @@
 package Seminar.HomeWork;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Seminar4 {
     public static void main(String[] args) {
-        ArrayList<Integer> arList = new ArrayList<>();
+      /*   ArrayList<Integer> arList = new ArrayList<>();
         makeList(16,arList);
         printMyList(arList);
         delEvenNumbers(arList);
@@ -13,8 +16,12 @@ public class Seminar4 {
         System.out.println("-");
         findMinMax(arList);
         System.out.println("-");
-        findMedium(arList);
+        findMedium(arList);*/
 
+
+       venera(13);
+
+       
     }
 
     /*
@@ -69,6 +76,26 @@ public class Seminar4 {
         }
         medium = summ / myList.size();
         System.out.printf("среднее = %s. summ = %s . кол-во элементов = %s",medium, summ, myList.size());
+    }
+
+    static void venera(int n) {
+       // Задание 2
+      //   Для списка из задачи про Солнечную систему
+      // удалить все повторяющиеся элементы.
+
+        Random rand = new Random();
+        List<String> planetList = List.of("Венера", "Юпитер", "Сатурн", "Земля", "Марс", "Плутоний", "Меркурий", "Нептун", "Уран");
+        ArrayList<String> randPlanetList = new ArrayList<>(n);
+
+        for (int i = 0; i < n; i++) {
+            randPlanetList.add(planetList.get(rand.nextInt(planetList.size())));
+            System.out.print(randPlanetList.get(i) + " ");
+        }
+        System.out.println();
+        List myUniqueList = randPlanetList.stream().distinct().collect(Collectors.toList());
+      for (int i = 0; i < myUniqueList.size(); i++) {
+        System.out.print(myUniqueList.get(i)+" ");
+      }
     }
 
 }
